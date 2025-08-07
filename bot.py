@@ -133,8 +133,10 @@ async def add(update: Update, context: ContextTypes.DEFAULT_TYPE):
         add_food(name, cal, prot, fat, carb)
         await update.message.reply_text(f"✅ Продукт '{name}' добавлен!")
     except:
-        await update.message.reply_text("❗ Используй формат:
-/add Яблоко 52 0.3 0.2 14")
+        await update.message.reply_text(
+            "❗ Используй формат:\n"
+            "/add Яблоко 52 0.3 0.2 14"
+        )
 
 # === ГЛАВНЫЙ ЗАПУСК ===
 def main():
